@@ -1,1 +1,1 @@
-install.packages("shiny")
+install.packages(c("shiny", "here"))
