@@ -10,3 +10,9 @@ Install R package requirements
 ```bash
 sudo Rscript requirements.R
 ```
+
+Spin up app in background
+
+```bash
+Rscript app.R &
+```
