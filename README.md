@@ -14,5 +14,5 @@ sudo Rscript requirements.R
 Spin up app in background
 
 ```bash
-Rscript app.R &
+nohup Rscript app.R &
 ```
