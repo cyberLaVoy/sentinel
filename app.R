@@ -1,38 +1,39 @@
 library(shiny)
+library(shinythemes)
 source(here::here("R", "utils.R"))
 
-ui <- fluidPage(
+ui <- fluidPage(theme = shinytheme("darkly"),
     h2("GPU"),
     fluidRow(
         column(width = 2,
-               h3("Core Temp. ( °C )"),
+               h3("Core Temp. (°C)"),
                textOutput("gpu_core_temp")),
         column(width = 2,
-               h3("Memory Temp. ( °C )"),
+               h3("Memory Temp. (°C)"),
                textOutput("gpu_memory_temp")),
         column(width = 2,
-               h3("Power ( Watts )"),
+               h3("Power (Watts)"),
                textOutput("gpu_power_usage")),
         column(width = 2,
-               h3("VRAM Used ( GB )"),
+               h3("VRAM Used (GB)"),
                textOutput("gpu_vram_usage")),
         column(width = 2,
-               h3("Fan ( % )"),
+               h3("Fan (%)"),
                textOutput("gpu_fan_perc"))
     ),
     h2("CPU"),
     fluidRow(
         column(width = 2,
-               h3("Temp. ( °C )"),
+               h3("Temp. (°C)"),
                textOutput("cpu_temp")),
         column(width = 2,
-               h3("Threads ( % )"),
+               h3("Threads (%)"),
                textOutput("cpu_thread_perc"))
     ),
     h2("RAM"),
     fluidRow(
         column(width = 2,
-               h3("Used ( GB )"),
+               h3("Used (GB)"),
                textOutput("ram_usage"))
     )
 )
